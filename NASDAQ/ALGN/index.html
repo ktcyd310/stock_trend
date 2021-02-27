@@ -13,7 +13,21 @@
 <body>
 
     <h2>Align_v1</h2>
-    <script type="text/javascript" > trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"invisalign","geo":"","time":"today 1-m"},{"keyword":"smile direct club","geo":"","time":"today 1-m"}],"category":0,"property":""}, {"exploreQuery":"date=today%201-m&q=invisalign,smile%20direct%20club","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
-    <script type="text/javascript" > trends.embed.renderExploreWidget("RELATED_QUERIES", {"comparisonItem":[{"keyword":"invisalign","geo":"","time":"now 1-d"}],"category":0,"property":""}, {"exploreQuery":"date=today%203-m&q=invisalign","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
+
+    <div id="chart">
+    </div>
+
+    <button onclick="next_fun()">Show trends</button>
+
+    <script type="application/javascript">
+        function next_fun(){
+
+            var divElem = document.getElementById('chart');
+
+            trends.embed.renderExploreWidgetTo(divElem, "TIMESERIES", {"comparisonItem":[{"keyword":"invisalign","geo":"","time":"today 1-m"},{"keyword":"smile direct club","geo":"","time":"today 1-m"}],"category":0,"property":""}, {"exploreQuery":"date=today%201-m&q=invisalign,smile%20direct%20club","guestPath":"https://trends.google.com:443/trends/embed/"});
+            trends.embed.renderExploreWidgetTo(divElem, "RELATED_QUERIES", {"comparisonItem":[{"keyword":"invisalign","geo":"","time":"now 1-d"}],"category":0,"property":""}, {"exploreQuery":"date=today%203-m&q=invisalign","guestPath":"https://trends.google.com:443/trends/embed/"});
+
+        }
+    </script>
 </body>
 </html>
