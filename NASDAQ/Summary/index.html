@@ -14,9 +14,13 @@
 <!-- ALGN 부분 -->
 <h2>ALGN</h2>
 
-<button id= 'chart_1' onclick="chart1_btn()">Show Chart</button>
-<button id= 'keyword_1' onclick="keyword1_btn()">Show Keywords</button>
+<button onclick="chart1_btn()">Show Chart</button>
+<div id="chart_1">
+</div>
 
+<button onclick="keyword1_btn()">Show Keywords</button>
+<div id="keyword_1">
+</div>
 
 <script type="application/javascript">
     function chart1_btn(){
@@ -36,8 +40,14 @@
 <!-- MSFT 부분 -->
 <h2>MSFT</h2>
 
-<button id= 'chart_2' onclick="chart2_btn()">Show Chart</button>
-<button id= 'keyword_2' onclick="keyword2_btn()">Show Keywords</button>
+<button onclick="chart2_btn()">Show Chart</button>
+<div id="chart_2">
+</div>
+
+
+<button onclick="keyword2_btn()">Show Keywords</button>
+<div id="keyword_2">
+</div>
 
 
 <script type="application/javascript">
@@ -58,20 +68,25 @@
 <!-- FB 부분 -->
 <h2>FB</h2>
 
-<button id= 'chart_3' onclick="chart3_btn()">Show Chart</button>
-<button id= 'keyword_3' onclick="keyword3_btn()">Show Keywords</button>
+<button onclick="chart3_btn()">Show Chart</button>
+<div id="chart_3">
+</div>
+
+<button onclick="keyword3_btn()">Show Keywords</button>
+<div id="keyword_3">
+</div>
 
 
 <script type="application/javascript">
     function chart3_btn(){
-        var divElem = document.getElementById('chart_2');
+        var divElem = document.getElementById('chart_3');
         trends.embed.renderExploreWidgetTo(divElem, "TIMESERIES", {"comparisonItem":[{"keyword":"Facebook","geo":"","time":"today 1-m"},{"keyword":"Instagram","geo":"","time":"today 1-m"},{"keyword":"whatsapp","geo":"","time":"today 1-m"}],"category":0,"property":""}, {"exploreQuery":"date=today%201-m&q=Facebook,Instagram,whatsapp","guestPath":"https://trends.google.com:443/trends/embed/"});
     }
 </script>
 
 <script type="application/javascript">
     function keyword3_btn(){
-        var divElem = document.getElementById('keyword_2');
+        var divElem = document.getElementById('keyword_3');
         trends.embed.renderExploreWidgetTo(divElem, "RELATED_QUERIES_0", {"comparisonItem":[{"keyword":"Facebook","geo":"","time":"now 1-d"},{"keyword":"Instagram","geo":"","time":"now 7-d"},{"keyword":"whatsapp","geo":"","time":"now 7-d"}],"category":0,"property":""}, {"exploreQuery":"date=now%207-d&q=Facebook,Instagram,whatsapp","guestPath":"https://trends.google.com:443/trends/embed/"});
         trends.embed.renderExploreWidgetTo(divElem, "RELATED_QUERIES_1", {"comparisonItem":[{"keyword":"Facebook","geo":"","time":"now 1-d"},{"keyword":"Instagram","geo":"","time":"now 7-d"},{"keyword":"whatsapp","geo":"","time":"now 7-d"}],"category":0,"property":""}, {"exploreQuery":"date=now%207-d&q=Facebook,Instagram,whatsapp","guestPath":"https://trends.google.com:443/trends/embed/"});
         trends.embed.renderExploreWidgetTo(divElem, "RELATED_QUERIES_2", {"comparisonItem":[{"keyword":"Facebook","geo":"","time":"now 1-d"},{"keyword":"Instagram","geo":"","time":"now 7-d"},{"keyword":"whatsapp","geo":"","time":"now 7-d"}],"category":0,"property":""}, {"exploreQuery":"date=now%207-d&q=Facebook,Instagram,whatsapp","guestPath":"https://trends.google.com:443/trends/embed/"});
