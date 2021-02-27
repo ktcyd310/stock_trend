@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, minimum-scale=1, shrink-to-fit=no" name="viewport">
     <link rel="icon" href="https://ssl.gstatic.com/trends_nrtr/2431_RC04/favicon.ico" type="image/x-icon">
-    <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2431_RC04/embed_loader.js" ></script>
+    <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2431_RC04/embed_loader.js" >
+        trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"invisalign","geo":"","time":"today 1-m"},{"keyword":"smile direct club","geo":"","time":"today 1-m"}],"category":0,"property":""}, {"exploreQuery":"date=today%201-m&q=invisalign,smile%20direct%20club"});
+        trends.embed.renderExploreWidget("RELATED_QUERIES", {"comparisonItem":[{"keyword":"invisalign","geo":"","time":"now 1-d"}],"category":0,"property":""}, {"exploreQuery":"date=today%203-m&q=invisalign"});
+    </script>
 
     <title>ALGN_v1</title>
 </head>
@@ -15,17 +18,27 @@
     <div id="chart">
     </div>
 
-    <button onclick="next_fun()">Show trends</button>
+    <button onclick="next_fun()">Show Chart</button>
+    <button onclick="next_fun_1()">Show Keywords</button>
+
 
     <script type="application/javascript">
         function next_fun(){
 
             var divElem = document.getElementById('chart');
-
             trends.embed.renderExploreWidgetTo(divElem, "TIMESERIES", {"comparisonItem":[{"keyword":"invisalign","geo":"","time":"today 1-m"},{"keyword":"smile direct club","geo":"","time":"today 1-m"}],"category":0,"property":""}, {"exploreQuery":"date=today%201-m&q=invisalign,smile%20direct%20club"});
-            trends.embed.renderExploreWidgetTo(divElem, "RELATED_QUERIES", {"comparisonItem":[{"keyword":"invisalign","geo":"","time":"now 1-d"}],"category":0,"property":""}, {"exploreQuery":"date=today%203-m&q=invisalign"});
-
         }
     </script>
+
+    <script type="application/javascript">
+        function next_fun_1(){
+
+            var divElem = document.getElementById('chart');
+            trends.embed.renderExploreWidgetTo(divElem, "RELATED_QUERIES", {"comparisonItem":[{"keyword":"invisalign","geo":"","time":"now 1-d"}],"category":0,"property":""}, {"exploreQuery":"date=today%203-m&q=invisalign"});
+        }
+    </script>
+
+
+
 </body>
 </html>
